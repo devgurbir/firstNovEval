@@ -23,52 +23,57 @@
       "year": "2011",
       "price": 3950000,
       "image": "https://via.placeholder.com/550x350"
+    },
+    {
+      "id": 4,
+      "name": "Innova",
+      "make": "SUV",
+      "year": "2005",
+      "price": 1850000,
+      "image": "https://via.placeholder.com/550x350"
+    },
+    {
+      "id": 5,
+      "name": "Mercedes",
+      "make": "Sedan",
+      "year": "2018",
+      "price": 8850000,
+      "image": "https://via.placeholder.com/550x350"
+    },
+    {
+      "id": 6,
+      "name": "BMW 5 Series",
+      "make": "Sedan",
+      "year": "2011",
+      "price": 6950000,
+      "image": "https://via.placeholder.com/550x350"
+    },
+    {
+      "id": 7,
+      "name": "Kia",
+      "make": "SUV",
+      "year": "2015",
+      "price": 1750000,
+      "image": "https://via.placeholder.com/550x350"
+    },
+    {
+      "id": 8,
+      "name": "BMW e5",
+      "make": "SUV",
+      "year": "2018",
+      "price": 4850000,
+      "image": "https://via.placeholder.com/550x350"
+    },
+    {
+      "id": 9,
+      "name": "Scorpio",
+      "make": "SUV",
+      "year": "2011",
+      "price": 950000,
+      "image": "https://via.placeholder.com/550x350"
     }
   ],
   "orders": [
-    {
-      "id": 1,
-      "carId": 5,
-      "userName": "Gurbir",
-      "userPhone": "6280263283",
-      "transactionTime": "12/1/2021"
-    },
-    {
-      "userName": "Gurbir",
-      "userPhone": "52",
-      "transactionTime": "1638375727913",
-      "id": 2
-    },
-    {
-      "carId": 1,
-      "userName": "Gurbir",
-      "userPhone": "6280263283",
-      "transactionTime": "1638375891553",
-      "id": 3
-    },
-    {
-      "headers": {
-        "Content-Type": "application/json"
-      },
-      "data": {
-        "carId": 1,
-        "userName": "Gurbir",
-        "userPhone": "6280263283",
-        "transactionTime": "1638376036287"
-      },
-      "id": 4
-    },
-    {
-      "headers": {
-        "Content-Type": "application/json"
-      },
-      "data": {
-        "carId": 1,
-        "userName": "Gurbir",
-        "userPhone": "6280263283",
-        "transactionTime": "1638376156769"
-      },
-      "id": 5
-    }
+    
   ]
 }
