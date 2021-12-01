@@ -80,10 +80,10 @@ function CarListings(){
             transactionTime: Date.now().toString()
         }
         const res = await axios.post("http://localhost:3000/orders", {
-            headers: {
-                'Content-Type': 'application/json'
-              },
-            data: data          
+            carId: selectedCarId,
+            userName: personalInfo.name,
+            userPhone: personalInfo.phone,
+            transactionTime: Date.now().toString()          
         } 
         
         )
