@@ -1,0 +1,7 @@
+.carListings {
+    display: flex;
+    width: 90%;
+    margin: 20px auto;
+    flex-wrap: wrap;
+    gap: 20px;
+}

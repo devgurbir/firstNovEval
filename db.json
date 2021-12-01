@@ -1,0 +1,37 @@
+{
+  "cars": [
+    {
+      "id": 1,
+      "name": "Creta",
+      "type": "SUV",
+      "year": "2005",
+      "price": 1050000,
+      "image": "https://via.placeholder.com/550x350"
+
+      
+    },
+    {
+      "id": 2,
+      "name": "Audi Q5",
+      "type": "SUV",
+      "year": "2018",
+      "price": 5850000,
+      "image": "https://via.placeholder.com/550x350"
+    },
+    {
+      "id": 3,
+      "name": "BMW 2 Series",
+      "type": "Sedan",
+      "year": "2011",
+      "price": 3950000,
+      "image": "https://via.placeholder.com/550x350"
+    }
+  ],
+  "orders": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ]
+}
