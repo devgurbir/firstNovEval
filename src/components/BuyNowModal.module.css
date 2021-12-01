@@ -1,0 +1,18 @@
+.buyNowModal {
+    position: absolute;
+    top: 30%;
+    left: 30%;
+    width: 500px;
+    z-index: 10;
+    padding: 30px;
+    background-color: gray;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.buyNowModal input {
+    height: 40px;
+    padding: 10px;
+}

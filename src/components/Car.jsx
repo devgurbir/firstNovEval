@@ -1,7 +1,8 @@
 import React from 'react'
 import styles from "./Car.module.css"
 
-function Car({carData}){
+function Car({carData, buyNowFn}){
+    
     return (
         <div className={styles.car}>
             <div className={styles.carImage}>
@@ -14,7 +15,7 @@ function Car({carData}){
                     <span><strong>Type:</strong> {carData.make}</span>
                     <span><strong>Year of Make:</strong> {carData.year}</span>
                 </div>
-                <button className = {styles.buyNow}>Buy Now</button>
+                <button onClick = {(id) => buyNowFn(id)} className = {styles.buyNow}>Buy Now</button>
             </div>
         </div>
     )
