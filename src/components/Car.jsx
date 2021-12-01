@@ -11,7 +11,7 @@ function Car({carData}){
                 <h2>{carData.name}</h2>
                 <h4>Price: {carData.price}</h4>
                 <div className = {styles.yeartype}>
-                    <span><strong>Type:</strong> {carData.type}</span>
+                    <span><strong>Type:</strong> {carData.make}</span>
                     <span><strong>Year of Make:</strong> {carData.year}</span>
                 </div>
                 <button className = {styles.buyNow}>Buy Now</button>

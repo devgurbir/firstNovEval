@@ -1,13 +1,16 @@
 import React, {useState} from 'react'
 
-function Filters(){
-    const [formData, setFormData] = useState({
-        year: "",
-        make: "",
-        sort: ""
-    })
+function Filters({formData, onChange, filterFunction}){    
     return(
-        <input value={} placeholder="Filter by year"></input>
+        <>
+        <input value={formData.year} placeholder="Filter by year" name="year" onChange={onChange} />
+        <input value={formData.make} placeholder="Filter by make" name="make"  onChange={onChange} />
+        <select value={formData.sort} name="sort" onChange={onChange}>
+            <option value="ascending">Sort Prices Low To High </option>
+            <option value="descending">Sort Prices High To Low </option>
+        </select>
+        <button onClick = {filterFunction}>Apply Filters</button>
+        </>
     )
 }
 
