@@ -105,7 +105,7 @@ function CarListings(){
     return(
         <>
         <Filters onChange = {handleFormChange} formData = {formData} filterFunction = {applyFilters} />
-        {carBought && <h4>Congratulations, you just bought a car</h4>}
+        {carBought && <h4 style={{margin: "10", color: "green"}}>Congratulations, you just bought a car</h4>}
         <div className = {styles.carListings}>
             {cars.map( car => <Car buyNowFn = {buyNowFn} key={car.id} carData={car} />)}
         </div>
