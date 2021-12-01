@@ -15,7 +15,7 @@ function Car({carData, buyNowFn}){
                     <span><strong>Type:</strong> {carData.make}</span>
                     <span><strong>Year of Make:</strong> {carData.year}</span>
                 </div>
-                <button onClick = {(id) => buyNowFn(id)} className = {styles.buyNow}>Buy Now</button>
+                <button onClick = {() => buyNowFn(carData.id)} className = {styles.buyNow}>Buy Now</button>
             </div>
         </div>
     )

@@ -10,7 +10,7 @@ function CarListings(){
     const [isLoading, setIsLoading] = useState(false)
     const [isError, setIsError] = useState(false)
     const [isBuyNow, setBuyNow] = useState(false);
-    const [selectedCarId, setSelectedCarId] = useState(null);
+    const [selectedCarId, setSelectedCarId] = useState(0);
 
     const [formData, setFormData] = useState({
         year: "",
@@ -60,21 +60,40 @@ function CarListings(){
         setSelectedCarId(id)
     }
 
-    const submitPersonalInfo = async (name, phone) => {
+    const [personalInfo, setPersonalInfo] = useState({
+        name: "",
+        phone: ""
+    })
+
+    const personalInfoFormChange = (e) => {
+        const {name, value} = e.target;
+        setPersonalInfo({...personalInfo, [name]: value})
+    }
+
+    const [carBought, setCarBought] = useState(false)
+
+    const submitPersonalInfo = async () => {
         const data = {
             carId: selectedCarId,
-            userName: name,
-            userPhone: phone,
+            userName: personalInfo.name,
+            userPhone: personalInfo.phone,
             transactionTime: Date.now().toString()
         }
-        await fetch("http://localhost:3000/orders", {
-            method: "POST",
+        const res = await axios.post("http://localhost:3000/orders", {
             headers: {
                 'Content-Type': 'application/json'
               },
-            body: JSON.stringify(data)            
-        }
+            data: data          
+        } 
+        
         )
+
+            
+        if(res){
+            setCarBought(true);
+            setBuyNow(false)
+        }
+        
     }
 
     if(isLoading){
@@ -86,10 +105,11 @@ function CarListings(){
     return(
         <>
         <Filters onChange = {handleFormChange} formData = {formData} filterFunction = {applyFilters} />
+        {carBought && <h4>Congratulations, you just bought a car</h4>}
         <div className = {styles.carListings}>
             {cars.map( car => <Car buyNowFn = {buyNowFn} key={car.id} carData={car} />)}
         </div>
-        {isBuyNow && <BuyNowModal submitInfo = {submitPersonalInfo} />}
+        {isBuyNow && <BuyNowModal personalInfo = {personalInfo} submitInfo = {submitPersonalInfo} handleForm = {personalInfoFormChange} />}
         </>
     )
 }
